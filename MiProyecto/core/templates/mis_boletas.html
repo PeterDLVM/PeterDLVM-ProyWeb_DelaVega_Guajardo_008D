@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block title %}
+    Mis Boletas
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2 class="titu8">Mis Compras</h2>
+    {% if boletas %}
+        <div class="row">
+            {% for boleta in boletas %}
+                <div class="col-md-6">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Boleta ID: {{ boleta.id }}</h5>
+                            <p class="card-text">Fecha de Compra: {{ boleta.fecha_compra }}</p>
+                            <ul>
+                                {% for detalle in boleta.detalles.all %}
+                                    <li>
+                                        <div class="row">
+                                            <div class="col-md-2">
+                                                <img src="{{ detalle.producto.imagen.url }}" alt="{{ detalle.producto.nombre }}" class="img-thumbnail">
+                                            </div>
+                                            <div class="col-md-10">
+                                                {{ detalle.cantidad }} x {{ detalle.producto.nombre }} - ${{ detalle.subtotal }}
+                                            </div>
+                                        </div>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                            <p>Total: ${{ boleta.total_boleta }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p>No tienes boletas de compra.</p>
+    {% endif %}
+</div>
+{% endblock %}

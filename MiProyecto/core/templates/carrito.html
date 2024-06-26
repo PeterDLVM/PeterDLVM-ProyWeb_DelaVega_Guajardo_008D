@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Carrito de Compras
+{% endblock %}
+
+{% block content %}
+    <h1 class="titu8">Carrito de Compras</h1>
+    <ul>
+        {% for detalle in detalles_compra %}
+            <li>
+                <img src="{{ detalle.producto.imagen.url }}" alt="{{ detalle.producto.nombre }}" width="150" height="150">
+                {{ detalle.cantidad }} x {{ detalle.producto.nombre }} - ${{ detalle.subtotal }} 
+            </li>
+            <form action="{% url 'eliminar_del_carrito' detalle.id %}" method="post" style="display: inline;">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-danger btn-sm">Quitar del Carrito</button>
+            </form>
+            <hr>
+        {% endfor %}
+    </ul>
+    <p class="parra15">Total: ${{ total_carrito }} </p>
+    <div class="row center"> <!-- Centra los elementos horizontalmente -->
+        <div class="col-md-auto"> <!-- Utiliza el ancho automático basado en el contenido -->
+            <form action="{% url 'confirmar_compra' %}" method="post" class="d-inline-block mr-2"> <!-- Mantén los elementos en línea y añade un margen derecho pequeño -->
+                {% csrf_token %}
+                <button type="submit" class="btn btn-success">Comprar</button>
+            </form>
+            <a href="{% url 'Nuestros-productos' %}" class="btn btn-primary">Volver</a> <!-- El otro botón en línea con el primero -->
+        </div>
+    </div>
+    <br>
+{% endblock %}

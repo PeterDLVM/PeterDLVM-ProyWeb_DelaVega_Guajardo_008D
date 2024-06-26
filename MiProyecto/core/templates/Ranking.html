@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    Todo-Mascotas - Ranking
+{% endblock %}
+
+{% block content %}
+        {% block extrascripts %}
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="{% static 'Js/script-api-todomascotas.js' %}"></script>
+        <script src="{% static 'Js/script-todomascotas.js' %}"></script>
+        {% endblock %}
+        <main class="container">
+            <div class="row">
+                <!--Boton mostrar ranking de api-->
+                <div class="col-md-4">
+                    <input type="button" value="Mostrar ranking" onclick="mostrarRanking()" class="btn btn-outline-primary">
+                </div>
+                <!--casilla de filtro-->
+                <div class="col-md-4">
+                    <select name="tipo" id="tipo" class="form-select">
+                        <option value="">Seleccione tipo de mascota</option>
+                        <option value="perro">perro</option>
+                        <option value="gato">gato</option>
+                    </select>
+                </div>
+                <!--contador de filas-->
+                <div class="col-md-4">
+                    <div class="contador">Filas mostradas: <span id="contador">0</span></div>
+                </div>
+            </div>
+            <!--tabla muestra datos api-->
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>nombre</th>
+                        <th>precio</th>
+                        <th>observacion</th>
+                        <th>mascota</th>
+                        <th>estrellas</th>
+                    </tr>
+                </thead>
+                <tbody id="mascotas">
+    
+                </tbody>
+            </table>
+        </main>
+        <br>
+</main>
+{% endblock %}

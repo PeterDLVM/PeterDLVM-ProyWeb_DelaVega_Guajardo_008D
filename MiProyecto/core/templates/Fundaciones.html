@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    Todo-Mascotas - Nuestros Productos
+{% endblock %}
+
+{% block content %}
+        <!--Parrafos fundaciones-->
+        <div class="container">
+            <h2 class="titulo-funda">¿Porque ayudar a fundaciones de animales?</h2>
+            <div class="content">
+                <p>Apoyar a las fundaciones de animales es una de las acciones más valiosas que podemos tomar como individuos y como sociedad. Estas organizaciones desempeñan un papel fundamental en la protección y el bienestar de nuestros amigos de cuatro patas, que comparten con nosotros este planeta. Desde rescatar animales abandonados y maltratados hasta proporcionarles refugio, atención médica y amor, las fundaciones de animales realizan un trabajo admirable. Cada contribución que hacemos, ya sea a través de donaciones, tiempo voluntario o difusión de información, marca la diferencia en la vida de estos seres vulnerables. Al ayudar a estas fundaciones, no solo les damos una segunda oportunidad a los animales necesitados, sino que también promovemos una cultura de compasión, empatía y respeto hacia todas las formas de vida en nuestro mundo. ¡Juntos podemos lograr nuestras metas!</p>
+                <img class="img-funda-1" src="{% static 'Img/Img-funda-1.jpg' %}" alt="img-fundacion">
+                <h2 class="titulo-funda">Nuestra mision como pyme.</h2>
+                <p>Nuestra empresa es una pequeña y dinámica pyme dedicada a promover sobre la importancia de las fundaciones de animales y cómo podemos contribuir a su causa. Nos enorgullece canalizar nuestro compromiso a través de donaciones generadas por las ventas de nuestros productos. Creemos firmemente en la protección y el bienestar de los animales, y estamos comprometidos a apoyar a las organizaciones dedicadas a su rescate, cuidado y protección. Cada compra que realizas con nosotros no solo te brinda un producto de calidad, sino que también contribuye directamente a ayudar a los animales necesitados. ¡Únete a nosotros en esta noble misión y hagamos la diferencia juntos</p>
+                <img class="img-funda-1" src="{% static 'Img/Img-fundacion.jpg' %}" alt="img-fundacion2">
+            </div>
+        </div>
+        <hr>
+        <iframe class="video" src="https://www.youtube.com/embed/yv0XnRaY3B8?si=kS6jdwA1ZPm1oNa4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <hr>
+    </main>
+{% endblock %}
+<script src="{% static 'Js/script-todomascotas.js' %}"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

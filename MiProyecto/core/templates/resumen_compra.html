@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}
+    Todo-Mascotas - resumen_compra
+{% endblock %}
+
+{% block content %}
+    <h1 class="titu8">Resumen de Compra</h1>
+    <p class="parra15">Boleta ID: {{ boleta.id }}</p>
+    <p class="parra15">Fecha de Compra: {{ boleta.fecha_compra }}</p>
+    <ul>
+        {% for detalle in detalles_compra %}
+            <li>
+                <img src="{{ detalle.producto.imagen.url }}" alt="{{ detalle.producto.nombre }}" width="100" height="100">
+                {{ detalle.cantidad }} x {{ detalle.producto.nombre }} - ${{ detalle.subtotal }} 
+            </li>
+        {% endfor %}
+    </ul>
+    <p class="parra15">Total: ${{ total_boleta }} </p>
+    <p class="parra15">¡Nos pondremos en contacto por su correo, muchas gracias por preferirnos! </p>
+    <a href="{% url 'Nuestros-productos' %}" class="btn btn-primary">Volver</a>
+    <br>
+    <br>
+{% endblock %}

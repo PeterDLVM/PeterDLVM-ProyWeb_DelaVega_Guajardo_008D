@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    Todo-Mascotas - Mi cuenta
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2 class="titu8">Mi cuenta</h2>
+    <p class="parra1">Bienvenido, {{ user.username }}</p>
+    <a href="{% url 'mis_boletas' %}" class="btn btn-primary">Ver mis compras</a>
+    <br>
+    <br>
+
+    <div class="row">
+        <div class="col-md-4">
+            <img src="{% static 'img/img-micuenta.jpg' %}" alt="Imagen de perfil" class="img-fluid">
+        </div>
+        <br>
+        <div class="col-md-8">
+            {% if profile.primer_nombre %}
+                <h3 class="titu8">Información de contacto</h3>
+                <p class="parra15"><strong>Usuario:</strong> {{ user.username }}</p>
+                <p class="parra15"><strong>Nombre Completo:</strong> {{ profile.primer_nombre }} {{ profile.segundo_nombre }} {{ profile.apellido_paterno }} {{ profile.apellido_materno }}</p>
+                <p class="parra15"><strong>Dirección:</strong> {{ profile.direccion }}</p>
+                <p class="parra15"><strong>Correo:</strong> {{ user.email }}</p>
+                <p class="parra15"><strong>Celular:</strong> {{ profile.celular }}</p>
+                <a href="?edit=true" class="btn btn-primary" style="margin-left:  30%;">Actualizar datos</a>
+            {% endif %}
+            <br>
+            {% if not profile.primer_nombre or request.GET.edit %}
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="primer_nombre" class="parra15">Primer Nombre:</label>
+                        <input type="text" id="primer_nombre" name="primer_nombre" class="form-control" value="{{ profile.primer_nombre }}">
+                    </div>
+                    <div class="form-group">
+                        <label for="segundo_nombre" class="parra15">Segundo Nombre:</label>
+                        <input type="text" id="segundo_nombre" name="segundo_nombre" class="form-control" value="{{ profile.segundo_nombre }}">
+                    </div>
+                    <div class="form-group">
+                        <label for="apellido_paterno" class="parra15">Apellido Paterno:</label>
+                        <input type="text" id="apellido_paterno" name="apellido_paterno" class="form-control" value="{{ profile.apellido_paterno }}">
+                    </div>
+                    <div class="form-group">
+                        <label for="apellido_materno" class="parra15">Apellido Materno:</label>
+                        <input type="text" id="apellido_materno" name="apellido_materno" class="form-control" value="{{ profile.apellido_materno }}">
+                    </div>
+                    <div class="form-group">
+                        <label for="direccion" class="parra15">Dirección:</label>
+                        <input type="text" id="direccion" name="direccion" class="form-control" value="{{ profile.direccion }}">
+                    </div>
+                    <div class="form-group">
+                        <label for="celular" class="parra15">Celular:</label>
+                        <input type="text" id="celular" name="celular" class="form-control" value="{{ profile.celular }}">
+                    </div>
+                    <br>
+                    <button type="submit" class="btn btn-primary" style="margin-left:  30%;">Guardar cambios</button>
+                </form>
+            {% endif %}
+        </div>
+    </div>
+</div>
+<br>
+{% endblock %}

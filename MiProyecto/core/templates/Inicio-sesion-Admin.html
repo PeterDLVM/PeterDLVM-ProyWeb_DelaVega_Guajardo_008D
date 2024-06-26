@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Todo-Mascotas - Inicio-sesion-Admin
+{% endblock %}
+
+{% block content %}
+    <br>
+    <div class="contenedor">
+        <div class="imagen-lateral">
+            <img src="{% static 'img/img-ini-sesion-2.jpg' %}" alt="Imagen Lateral">
+        </div>
+        <div class="formulario-login">
+            <h2>Iniciar Sesión como Administrador</h2>
+            <form method="post">
+                {% csrf_token %}
+                <label for="username">Usuario:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" required>
+
+                <input type="submit" value="Iniciar Sesión">
+            </form>
+        </div>
+    </div>
+    <br>    
+    <hr>
+{% endblock %}
