@@ -1,0 +1,136 @@
+{ 
+    "productos":[ 
+        {
+            "id": 1,
+            "nombre": "Arnes con pechera",
+            "precio": 8990,
+            "observacion": "Arnés para mascota acolchado resistente",
+            "mascota": ["perro", "gato"],
+            "estrellas": {
+                "min": 1,
+                "max": 5
+            }
+        },
+        {
+            "id": 2,
+            "nombre": "Bozal de colores",
+            "precio": 9990,
+            "observacion": "el bozal es duradero y suave, evita con éxito que tu perro muerda",
+            "mascota": "perro",
+            "estrellas": {
+                "min": 1,
+                "max": 5
+            }
+        },
+        {
+            "id": 3,
+            "nombre": "Collar de colores",
+            "precio": 5990,
+            "observacion": "Collar de mascota. Variedad en colores.",
+            "mascota": ["perro", "gato"],
+            "estrellas": {
+                "min": 1,
+                "max": 5
+            }
+        },
+        {
+            "id": 4,
+            "nombre": "Cepillos de mascota",
+            "precio": 2500,
+            "observacion": "Cepillo para peinar y extraer los pelos sueltos de tu mascota.",
+            "mascota": ["perro", "gato"],
+            "estrellas": {
+                "min": 1,
+                "max": 5
+            }
+        },
+        {
+            "id": 5,
+            "nombre": "Guante quitapelos",
+            "precio": 1990,
+            "observacion": "Guante removedor de pelo tipo peine para Perros Y Gatos.",
+            "mascota": ["perro", "gato"],
+            "estrellas": {
+                "min": 1,
+                "max": 5
+            }
+        },
+        {
+            "id": 6,
+            "nombre": "Juguete bola con dientes",
+            "precio": 4500,
+            "observacion": "Pelota de caucho con dientes",
+            "mascota": "perro",
+            "estrellas": {
+                "min": 1,
+                "max": 5
+            }
+        },
+        {
+            "id": 7,
+            "nombre": "Cama mascota",
+            "precio": 12990,
+            "observacion": "Cama de invierno con cubierta de chiporro peludita para mantener a tu mascota calentita.",
+            "mascota": ["perro", "gato"],
+            "estrellas": {
+                "min": 1,
+                "max": 5
+            }
+        },
+        {
+            "id": 8,
+            "nombre": "Bolsa para heces 480 bolsas",
+            "precio": 8990,
+            "observacion": "Bolsas para recoger heces de perros y otras mascotas",
+            "mascota": ["perro", "gato"],
+            "estrellas": {
+                "min": 1,
+                "max": 5
+            }
+        },
+        {
+            "id": 9,
+            "nombre": "Pasto para baño",
+            "precio": 25000,
+            "observacion": "Pasto para interiores, para que tu mascota lo use como baño",
+            "mascota": "perro",
+            "estrellas": {
+                "min": 1,
+                "max": 5
+            }
+        },
+        {
+            "id": 10,
+            "nombre": "Corta uñas para mascotas",
+            "precio": 1500,
+            "observacion": "Cortauñas para mascotas",
+            "mascota": ["perro", "gato"],
+            "estrellas": {
+                "min": 1,
+                "max": 5
+            }
+        },
+        {
+            "id": 11,
+            "nombre": "Pala recoge heces",
+            "precio": 4990,
+            "observacion": "Te gusta ir de paseos con tu mascota, esta es la solución para recoger sus heces.",
+            "mascota": "perro",
+            "estrellas": {
+                "min": 1,
+                "max": 5
+            }
+        },
+        {
+            "id": 12,
+            "nombre": "Cuenco con nombre",
+            "precio": 8990,
+            "observacion": "Los cuencos de acero inoxidable están hechos de acero inoxidable, no tóxico, seguro, respetuoso con el medio ambiente.",
+            "mascota": ["perro", "gato"],
+            "estrellas": {
+                "min": 1,
+                "max": 5
+            }
+        }   
+    ]
+}

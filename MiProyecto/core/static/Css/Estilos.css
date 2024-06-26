@@ -1,0 +1,517 @@
+body{
+    background-color: white;
+}
+.nav-item{
+    background-color: rgb(255, 204, 0);
+    font-size: large;
+    margin-right: 3px;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 5px;
+}
+.imglogo{
+    width: 100px;
+    height:  100px; 
+    margin-left: auto;
+}
+.barrabusqueda{
+    margin-left: auto;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+
+}
+.ccompra{
+    margin-left: auto;
+}
+.carousel-item img {
+    max-width: 100%;
+    max-height: 90%; 
+    object-fit: cover;
+}
+.contparra{
+    display: flex;
+    align-items: center;
+}
+.titu1{
+    font-size: 350%;
+    color :rgb(255, 204, 0);
+    -webkit-text-stroke: 0.7px black;
+}
+.titu8{
+    font-size: 250%;
+    color :rgb(255, 204, 0);
+    -webkit-text-stroke: 0.7px black;
+}
+.parra15{
+    font-size: large;
+}
+.parra1{
+    font-size: x-large;
+}
+.parra2{
+    flex: 1; 
+    max-width: 400px; 
+    margin-right: 10px; 
+}
+.img-1{
+    width: 450px;
+    height: 450px;
+    object-fit: contain ; 
+    margin-top: 10px;  
+}
+/* crear usuario*/
+.contsuscribete{
+    display: flex;
+    align-items: center;
+}
+.suscribetediv{
+    width: 500px;  
+    margin: 0 auto;
+    padding: 30px;      
+    border: 2px solid #000000;
+    border-radius: 10px;
+    background-color:rgb(255, 204, 0);
+}
+
+.suscribetediv h2 {
+    text-align: center;
+    font-size: 300%;
+}
+.suscribetediv p3 {
+    text-align: center;
+    font-size: large;
+
+
+}
+.suscribetediv input[type="text"],
+.suscribetediv input[type="email"],
+.suscribetediv input[type="password"],
+.suscribetediv input[type="date"]{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.suscribetediv input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #a70303;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}  
+.imgsuscri{
+    width: 500px;
+    height: 300px;
+    
+}
+.footer{
+    background-color: #7a7a6a;
+    padding: 50px;
+    height: 300 px;
+    width: 100%;
+
+}
+.imgfoo{
+    height: 60px;
+    width: 60px;
+}
+.logo{
+    height: 100px;
+    width: 100px;
+    border: #f00505;
+}
+.fooparra{
+    text-align: right;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.footercon{
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+}
+.info1{
+    text-justify: top; 
+    margin-left: 20%;
+
+}
+#miniaturas-carrito {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 1000;
+  }
+  
+  #miniaturas-carrito.visible {
+    display: block;
+  }
+/* cartas junto a modal */
+.card {
+    height: 400px; 
+    overflow: hidden;
+}
+.card-img-top {
+    max-width: 100%;
+    height: auto; 
+}
+.card-body {
+    max-height: 400px; 
+    overflow: auto; 
+}
+.imgmodal{
+    max-width: 50%;
+    max-height: 50%;
+}
+
+/*fundacion*/
+.titulo-funda{
+    font-size: 350%;
+    color :rgb(255, 204, 0);
+    -webkit-text-stroke: 0.7px black;
+}
+.parra3{
+    font-size: x-large;
+}
+.img-funda-1{
+    width: 100%;
+    max-height: 450px;
+    align-items: center;
+
+}
+.video{
+    width: 98%;
+    height:500px;
+    margin-left: 10px;
+}
+.botones-container {
+    display: flex;
+    justify-content: space-between; /* Ajusta esto según cómo quieras distribuir los botones */
+    align-items: center; /* Alineación vertical centrada opcional */
+}
+
+.botona{
+    background-color:rgb(255, 204, 0) ;
+    border-radius: 15px;
+    padding: 5px;
+    width: 35%;
+    height: 30%;
+    margin: 20px; /* Espacio entre botones */
+}
+
+.titulosbo{
+    padding: 10px;
+    
+    
+}
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+  }
+
+
+.modal-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#username,
+#password {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+#username:focus,
+#password:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.close {
+    color: rgb(255, 204, 0); 
+    border-color: #000000;
+    margin-left: 95%;
+    font-size: 28px; 
+    font-weight: bold; 
+}
+
+.close:hover,
+.close:focus {
+    color: black; 
+    text-decoration: none; 
+    cursor: pointer; 
+}
+#map {
+    width: 100%;
+    height: 400px;
+}
+.tituMap{
+    margin-left: 24%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.tituMap2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;
+    margin-left: 6%;
+}
+.img-boton-perri{
+    width: 100px;
+    height: 100px;
+}
+.ranking-img{
+    width: 30%;
+    height: 30%;
+    margin-left: 35%;
+    margin-top: 0%;
+}
+.tituprodes{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;
+    margin-left: 20%;
+}
+.reloj {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    color: #ffffff; 
+    font-size: 18px; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 5px 10px; 
+    border-radius: 5px; 
+}   
+/* Estilos para el formulario de inicio de sesión */
+.formulario-login {
+    max-width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: rgb(255, 204, 0);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.formulario-login h2 {
+    text-align: center;
+    color: black;
+    margin-bottom: 50px;
+}
+
+.formulario-login input[type="text"],
+.formulario-login input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.formulario-login input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 30px;
+    background-color: #a70303;
+    color: rgb(7, 6, 6);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.formulario-login input[type="submit"]:hover {
+    background-color: #ffa500; /* Color de hover más claro */
+}
+
+.formulario-login label {
+    color: rgb(3, 3, 3);
+    font-weight: bold;
+}
+
+/* Contenedor para el formulario y la imagen */
+.contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Alinea los elementos verticalmente */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan a una nueva línea cuando no quepan */
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centra horizontalmente */
+    padding: 20px; /* Espaciado interno */
+}
+
+.imagen-lateral {
+    flex: 1; /* Ocupa todo el espacio disponible */
+    text-align: center; /* Alinea la imagen al centro horizontalmente */
+    margin-top: 20px; /* Espacio superior */
+}
+
+.imagen-lateral img {
+    width: 600px; 
+    height: 400px; 
+    border-radius: 10px; /
+}
+
+/* Estilos para cuando la pantalla es más pequeña que 1200px */
+@media screen and (max-width: 1200px) {
+
+    /* Navbar */
+    .navbar {
+        padding: 10px;
+        max-width: 90%;
+        margin: 0 auto; /* Centrar horizontalmente */
+    }
+
+    .tituprodes {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: large; /* Ajustar el tamaño de fuente */
+        text-align: center; /* Centrar el texto */
+        margin: 20px auto; /* Centrar horizontal y agregar espacio superior e inferior */
+        max-width: 90%;
+    }
+
+    /* Imágenes del Carousel */
+    .carousel-item img {
+        max-width: 100%;
+        height: auto; /* Mantener la proporción */
+        max-height: 400px; /* Altura máxima para controlar el tamaño */
+        margin: 0 auto; /* Centrar horizontalmente */
+    }
+
+    /* Contenido de las Tarjetas */
+    .card {
+        height: auto; /* Altura automática para adaptarse al contenido */
+        margin-bottom: 20px; /* Espacio inferior entre tarjetas */
+    }
+
+    .card-img-top {
+        max-width: 100%;
+        height: auto; /* Mantener la proporción */
+    }
+
+    .card-body {
+        max-height: none; /* Altura máxima sin recortar */
+        overflow: visible; /* Permitir que el contenido desborde si es necesario */
+    }
+
+    /* Nuestra meta */
+    .img-1 {
+        max-width: 100%;
+        height: auto; /* Mantener la proporción */
+        margin: 20px auto; /* Centrar horizontalmente y agregar espacio alrededor */
+    }
+
+    .contparra {
+        flex-direction: column; /* Cambiar a columna para alinear verticalmente */
+        align-items: center; /* Centrar horizontalmente */
+        max-width: 90%;
+        margin: 20px auto; /* Centrar horizontalmente y agregar espacio */
+    }
+
+    /* Suscribete */
+    .contsuscribete {
+        flex-direction: column; /* Cambiar a columna para alinear verticalmente */
+        align-items: center; /* Centrar horizontalmente */
+        max-width: 90%;
+        margin: 20px auto; /* Centrar horizontalmente y agregar espacio */
+    }
+
+    .imgsuscri {
+        max-width: 100%;
+        height: auto; /* Mantener la proporción */
+        margin-bottom: 20px; /* Espacio inferior */
+    }
+
+    .suscribetediv {
+        margin-top: 20px;
+        max-width: 100%;
+        text-align: center; /* Centrar el texto */
+    }
+
+    /* Footer */
+    .footer {
+        padding: 20px;
+        max-width: 100%;
+        margin: 0 auto; /* Centrar horizontalmente */
+    }
+
+    /* Modal en tarjetas */
+    #myModal {
+        max-width: 90%;
+        max-height: 90%;
+        margin: 0 auto; /* Centrar horizontalmente */
+    }
+
+    .imgmodal {
+        max-width: 100%;
+        max-height: 100%;
+        margin: 0 auto; /* Centrar horizontalmente */
+    }
+
+    .parra3 {
+        font-size: medium; /* Tamaño de fuente mediano */
+        max-width: 90%;
+        margin: 0 auto; /* Centrar horizontalmente */
+    }
+
+    .img-funda-1 {
+        max-width: 100%;
+        height: auto; /* Mantener la proporción */
+        margin: 20px auto; /* Centrar horizontalmente y agregar espacio */
+    }
+
+    .video {
+        max-width: 100%;
+        height: auto; /* Mantener la proporción */
+        margin: 0 auto; /* Centrar horizontalmente */
+    }
+
+    .contenedor {
+        flex-direction: column; /* Cambia a columna en pantallas más pequeñas */
+        align-items: center; /* Centra los elementos horizontalmente */
+    }
+
+    .formulario-login {
+        margin-top: 20px;
+        max-width: 50%; /* Ajusta el formulario al 90% del ancho disponible */
+    }
+
+    .imagen-lateral {
+        flex: none; /* No ocupa todo el espacio en pantallas pequeñas */
+        margin-bottom: 10px; /* Espacio superior */
+    }
+
+    .imagen-lateral img {
+        width: 100%; /* Ancho completo en pantallas pequeñas */
+    }
+}
+@media screen and (max-width: 800px) {
+    .formulario-login {
+        margin-top: 20px;
+        max-width: 90%; /* Ajusta el formulario al 90% del ancho disponible */
+    }
+}
